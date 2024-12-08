@@ -18,7 +18,6 @@ npm i react-router-dom
 npm i knex
 
 
-
 DB and backend complete
 
 next: I'll do HomePage and NavBar

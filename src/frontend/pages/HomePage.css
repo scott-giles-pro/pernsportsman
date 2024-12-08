@@ -1,0 +1,37 @@
+/* Parent container to flex vertically */
+.slideshow-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+}
+
+/* Slideshow container dynamically adjusts height */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Optional: limit max width */
+    height: auto; /* Auto height for aspect ratio */
+    aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+/* Each slide ensures the entire image fits */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: contain; /* Fit the image inside */
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Active slide is visible */
+.slide.active {
+    opacity: 1;
+}
